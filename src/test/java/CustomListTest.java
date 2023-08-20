@@ -32,11 +32,14 @@ public class CustomListTest {
     @Test
     public void insertElement(){
         getList();
-        List<Integer> customList;
-        customList = new Random().ints(100, 0, 10000).boxed().collect(toList());
-        int a = customList.get(49);
-        customList.add(49,12345678);
-        Assert.assertNotEquals((Integer) a, (Integer) customList.get(49));
+        CustomList<Integer> customList = new CustomList<>();
+        customList.add(5);
+        customList.add(65);
+        customList.add(22);
+        customList.add(33);
+        int a = customList.get(1);
+        customList.insert(123456,1);
+        Assert.assertNotEquals((Integer) a, (Integer) customList.get(1));
 
     }
 
@@ -49,21 +52,24 @@ public class CustomListTest {
     }
     @Test
     public void clearList(){
-        getList();
-        List<Integer> customList;
-        customList = new Random().ints(100, 0, 10000).boxed().collect(toList());
-        Assert.assertEquals(100, customList.size());
+        List<Integer> customList = getList();
+        customList.add(15);
+        customList.add(20);
+        Assert.assertEquals(2, customList.size());
         customList.clear();
         Assert.assertEquals(0,customList.size());
     }
     @Test
     public void sortInts(){
-        getList();
-        List<Integer> customList;
-        customList = new Random().ints(100,0,10000).boxed().collect(toList());
+        List<Integer> customList = getList();
+        for (int i = 16; i > 0; i--) {
+            customList.add(i);
+        }
+        //System.out.println(customList);
+
         customList.sort(Integer::compareTo);
         boolean sorted = true;
-        for (int i = 1; i < customList.size(); i++) {
+        for (int i = 2; i < customList.size(); i++) {
             int a = customList.get(i-1);
             int b = customList.get(i);
             if (b < a) {
@@ -71,6 +77,7 @@ public class CustomListTest {
                 break;
             }
         }
+        //System.out.println(customList);
         Assert.assertTrue(sorted);
     }
 

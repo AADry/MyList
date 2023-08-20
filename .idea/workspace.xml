@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dee8ce53-4102-442d-a61d-41d6d4d1261b" name="Changes" comment="Больше тестов">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sorter/ListSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CustomListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SorterTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/CustomListTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyList.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CustomList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/list/CustomList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/list/CustomList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/list/CustomList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CustomListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CustomListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +57,27 @@
       <module name="MyList" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomListTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomListTest.insertElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomListTest.clearList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyList" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomListTest" />
-      <option name="METHOD_NAME" value="insertElement" />
+      <option name="METHOD_NAME" value="clearList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomListTest.equalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomListTest" />
+      <option name="METHOD_NAME" value="equalsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -83,16 +88,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomListTest" />
       <option name="METHOD_NAME" value="removeElement" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomListTest.sortInts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyList" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomListTest" />
-      <option name="METHOD_NAME" value="sortInts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,19 +104,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.CustomListTest.clearList" />
+      <item itemvalue="JUnit.CustomListTest.equalsTest" />
       <item itemvalue="JUnit.CustomListTest" />
       <item itemvalue="JUnit.list in MyList" />
-      <item itemvalue="JUnit.CustomListTest.insertElement" />
       <item itemvalue="JUnit.CustomListTest.removeElement" />
-      <item itemvalue="JUnit.CustomListTest.sortInts" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CustomListTest" />
+        <item itemvalue="JUnit.CustomListTest.equalsTest" />
+        <item itemvalue="JUnit.CustomListTest.clearList" />
         <item itemvalue="JUnit.list in MyList" />
         <item itemvalue="JUnit.CustomListTest.removeElement" />
-        <item itemvalue="JUnit.CustomListTest.insertElement" />
-        <item itemvalue="JUnit.CustomListTest.sortInts" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692279078744</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Больше тестов">
+      <created>1692548754659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692548754659</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +172,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyList$CustomListTest_sortInts.ic" NAME="CustomListTest.sortInts Coverage Results" MODIFIED="1692544991051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/MyList$CustomListTest.ic" NAME="CustomListTest Coverage Results" MODIFIED="1692548244364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MyList$CustomListTest.ic" NAME="CustomListTest Coverage Results" MODIFIED="1692553515359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -29,7 +29,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @return элемент из списка с указанным индексом
      * @throws IndexOutOfBoundsException если индекс меньше нуля и больше длины списка
      */
-    @Override
+
     public E get(int index) {
         Objects.checkIndex(index, size);
         return (E) elementData[index];
@@ -40,12 +40,13 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @param e Добавляемый элемент
      * @return {@code true} Добавление элементов не ограничено условиями
      */
+
     @Override
     public boolean add(E e) {
         size++;
         int s = elementData.length;
-        if(s < size) grow();
-        elementData[size] = e;
+        if(s <= size) grow();
+        elementData[size-1] = e;
         return true;
     }
 
@@ -54,7 +55,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @param e Добавляемый элемент
      * @param index Индекс, под которым добавляется новый элемент
      */
-    public void add(E e, int index){
+    public void insert(E e, int index){
         Objects.checkIndex(index,size);
         size++;
         int s = elementData.length;
@@ -94,6 +95,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
     /**
      * Очищает весь список
      */
+    //@Override
     @Override
     public void clear() {
         final Object[] es = elementData;
@@ -109,9 +111,11 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
     /**
      * Каст Object в дженерик вынесен сюда, чтобы избежать предупреждений(warning) по всему коду
      */
+
     @Override
-    @SuppressWarnings("unchecked")
     public void sort(Comparator<? super E> c) {
+
         Arrays.sort((E[]) elementData, 0, size, c);
+
     }
 }
