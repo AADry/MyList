@@ -1,3 +1,5 @@
+package list;
+
 import java.util.*;
 
 public class CustomList<E> extends AbstractList<E> implements List<E> {
@@ -30,8 +32,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
     @Override
     public E get(int index) {
         Objects.checkIndex(index, size);
-        final Object[] es = elementData;
-        return elementData(index);
+        return (E) elementData[index];
     }
 
     /**
@@ -69,6 +70,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @param index индексы удаляемого элемента
      * @return Удалённый элемент
      */
+    @Override
     public E remove(int index) {
         Objects.checkIndex(index, size);
         final Object[] es = elementData;
@@ -85,12 +87,14 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
         final int newSize;
         if ((newSize = size - 1) > i)
             System.arraycopy(es, i + 1, es, i, newSize - i);
-        es[size = newSize] = null;
+        es[newSize] = null;
+        size = newSize;
     }
 
     /**
      * Очищает весь список
      */
+    @Override
     public void clear() {
         final Object[] es = elementData;
         for (int to = size, i = size = 0; i < to; i++)
@@ -105,10 +109,7 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
     /**
      * Каст Object в дженерик вынесен сюда, чтобы избежать предупреждений(warning) по всему коду
      */
-    @SuppressWarnings("unchecked")
-    E elementData(int index) {
-        return (E) elementData[index];
-    }
+    @Override
     @SuppressWarnings("unchecked")
     public void sort(Comparator<? super E> c) {
         Arrays.sort((E[]) elementData, 0, size, c);
