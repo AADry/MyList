@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 
 import static java.util.stream.Collectors.toList;
@@ -39,16 +40,13 @@ public class CustomListTest {
 
     @Test
     public void insertElement() {
-        getList();
-        CustomList<Integer> customList = new CustomList<>();
-        customList.add(5);
-        customList.add(65);
-        customList.add(22);
-        customList.add(33);
-        int a = customList.get(1);
-        customList.insert(123456, 1);
-        Assert.assertNotEquals((Integer) a, customList.get(1));
-
+        CustomList<Object> objects = new CustomList<>();
+        for (int i = 0; i < 10000; i++) {
+            objects.insert( new Object(), 0);
+        }
+        for (int i = 0; i < 10000; i++) {
+            Assert.assertNotNull(objects.get(i));
+        }
     }
 
     @Test

@@ -33,10 +33,8 @@ public class SorterTest {
         for (int i = 16; i > 0; i--) {
             list.add(i);
         }
-        System.out.println(list);
         ListSorter.quickSort(list);
         Assert.assertTrue(isSorted(list));
-        System.out.println(list);
     }
 
     private boolean isSorted(List<Integer> list) {

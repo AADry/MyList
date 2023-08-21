@@ -68,8 +68,8 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @param index Индекс, под которым добавляется новый элемент
      */
     public void insert(E e, int index) {
-        Objects.checkIndex(index, size);
         size++;
+        Objects.checkIndex(index, size);
         int s = elementData.length;
         elementData = Arrays.copyOf(elementData, s + 1);
         System.arraycopy(elementData, index, elementData, index + 1, s - index);
