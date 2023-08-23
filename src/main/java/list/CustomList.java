@@ -67,7 +67,8 @@ public class CustomList<E> extends AbstractList<E> implements List<E> {
      * @param e     Добавляемый элемент
      * @param index Индекс, под которым добавляется новый элемент
      */
-    public void insert(E e, int index) {
+    @Override
+    public void add(int index, E e) {
         size++;
         Objects.checkIndex(index, size);
         int s = elementData.length;

@@ -42,7 +42,7 @@ public class CustomListTest {
     public void insertElement() {
         CustomList<Object> objects = new CustomList<>();
         for (int i = 0; i < 10000; i++) {
-            objects.insert( new Object(), 0);
+            objects.add( 0, new Object());
         }
         for (int i = 0; i < 10000; i++) {
             Assert.assertNotNull(objects.get(i));
